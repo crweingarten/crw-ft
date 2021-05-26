@@ -14,9 +14,13 @@
       display: flex;
       justify-content: center;
       background-color: grey;
+      border-radius: 10px;
       width: 150px;
       color: white;
       padding: 10px;
+      margin: 2px;
+      box-shadow: 1px 1px 1px 1px DarkGrey
+      
   }
 
   .flex-container{
@@ -33,7 +37,7 @@
     display: block;
     margin: 0 auto;
     position: relative;
-    background-color: lightblue;
+    background-color: lightgray;
     padding: 20px;
   }
 
@@ -55,9 +59,8 @@
     border-radius:2em;
     box-sizing: border-box;
     font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    background-color: lightgray;
+    font-weight: 700;
+    color:royalblue;
     text-align:center;
     transition: all 0.2s;
   }
@@ -70,7 +73,7 @@
   }
   .pagination-block .pageButton {
     margin-top: 5%;
-    background-color: grey;
+    background-color: royalblue;
     color: white;
   }
   .pagination-block span:hover {
