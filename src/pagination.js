@@ -9,7 +9,6 @@ function dogPagination(dogs) {
 
       const prevButton = document.getElementById('button_prev');
       const nextButton = document.getElementById('button_next');
-      const clickPageNumber = document.querySelectorAll('.clickPageNumber');
       
       let current_page = 1;
       let records_per_page = 10;
@@ -45,7 +44,7 @@ function dogPagination(dogs) {
       }
 
       let changePage = function(page) {
-          const listingTable = document.getElementById('listingTable');
+          const dogGallery = document.getElementById('dogGallery');
 
           if (page < 1) {
               page = 1;
@@ -54,12 +53,28 @@ function dogPagination(dogs) {
               page = numPages();
           }
        
-          listingTable.innerHTML = "";
+          dogGallery.innerHTML = "";
 
           for(var i = (page -1) * records_per_page; i < (page * records_per_page) && i < dogs.length; i++) {
-            listingTable.innerHTML += `<div class='objectBlock'><img src=${dogs[i]} class='dogpic'><img></div>`
-          }
-          checkButtonOpacity();
+            dogGallery.innerHTML += `<div class='dogBlock'>
+            
+                <div><img src=${dogs[i]} class='dogpic-thumb' id='${dogs[i]}'><img></div>
+                <div><img src=${dogs[i]} class='dogpic modal' id='${dogs[i]}-fullsize' ><img></div>
+                </div>`}
+          
+        
+                const modalOpen = document.querySelectorAll('.dogpic-thumb')
+                
+                modalOpen.forEach(trigger => {
+                    trigger.addEventListener('click', () => {
+                    const popupModal = document.getElementById(`${trigger.id}-fullsize`)
+                    popupModal.classList.add('visible')   
+                    popupModal.addEventListener('click', () => {
+                    popupModal.classList.remove('visible')
+                         })})})
+
+                
+        checkButtonOpacity();
           selectedPage()
       }
 

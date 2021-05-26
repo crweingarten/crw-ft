@@ -1,50 +1,65 @@
-body {
-    background-color: lightblue
+  body {
+    background-color: lightgray
   }
   
-h1 {
-    color: navy;
-    margin-left: 20px
+
+  .dogpic-thumb {
+    height: 100px;
+    display: flex;
+   }
+
+
+
+  .dogBlock {
+      display: flex;
+      justify-content: center;
+      background-color: grey;
+      width: 150px;
+      color: white;
+      padding: 10px;
   }
 
-  .testy {color: navy;
-    margin-left: 20px}
-  
-.dogpic {
-  height: 100px
-}
-
+  .flex-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap
+      }
 
   .pagination {
-    max-width: 400px;
+    max-width: 800px;
     min-width: 300px;
     width: 100%;
     display: block;
     margin: 0 auto;
     position: relative;
-    background-color: lightgreen;
+    background-color: lightblue;
     padding: 20px;
   }
-  .pagination .tableList {
-      min-height: 250px;
-      text-indent: 20px;
-  }
-  .tableList .objectBlock {
-      position: relative;
-      background-color: black;
-      color: white;
-      padding: 10px;
-      margin-bottom: 10px;
-  }
+
+  
   .pageButton {
-      border: 1px solid black;
-      padding: 5px;
+    padding: 0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
   }
   .clickPageNumber {
-      background-color: lightgrey;
-      padding: 5px;
-      margin-left: 2px;
-      margin-right: 2px;
+    padding: 0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color: lightgray;
+    text-align:center;
+    transition: all 0.2s;
   }
   .pagination-block {
     text-align: center;
@@ -54,6 +69,7 @@ h1 {
     display: inline-block;
   }
   .pagination-block .pageButton {
+    margin-top: 5%;
     background-color: grey;
     color: white;
   }
@@ -68,3 +84,21 @@ h1 {
     user-select: none; 
   }
 
+
+  .modal {
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    padding: 45px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in-out;
+    z-index: 1011}
+    
+    .modal.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
