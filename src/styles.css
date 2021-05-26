@@ -2,13 +2,10 @@
     background-color: lightgray
   }
   
-
   .dogpic-thumb {
     height: 100px;
     display: flex;
-   }
-
-
+  }
 
   .dogBlock {
       display: flex;
@@ -19,8 +16,7 @@
       color: white;
       padding: 10px;
       margin: 2px;
-      box-shadow: 1px 1px 1px 1px DarkGrey
-      
+      box-shadow: 1px 1px 1px 1px DarkGrey    
   }
 
   .flex-container{
@@ -29,7 +25,7 @@
       justify-content: center;
       flex-wrap: wrap;
       width: 100%
-      }
+  }
 
   .pagination {
     max-width: 800px;
@@ -54,6 +50,7 @@
     text-align:center;
     transition: all 0.2s;
   }
+
   .clickPageNumber {
     padding: 0.3em 10px;
     margin:0 0.3em 0.3em 0;
@@ -64,31 +61,36 @@
     text-align:center;
     transition: all 0.2s;
   }
+
   .pagination-block {
     justify-content: center;
     display: flex;
     align-items: flex-end;
     flex-shrink: .25
   }
+
   .pagination-block span {
     display: inline-block;
   }
+
   .pagination-block .pageButton {
     margin-top: 5%;
     background-color: royalblue;
     color: white;
   }
+
   .pagination-block span:hover {
     cursor: pointer;
   }
+
   .opacity {
     opacity: 0.5;
   }
+
   .outline-none {
     outline: none;
     user-select: none; 
   }
-
 
   .modal {
     height: 500px;
@@ -104,6 +106,6 @@
     z-index: 1011}
     
     .modal.visible {
-      opacity: 1;
-      pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
     }
