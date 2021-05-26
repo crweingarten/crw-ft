@@ -1,5 +1,5 @@
-async function getDogs() {
-    let response = await fetch('https://dog.ceo/api/breed/chihuahua/images/random/50')
+async function getDogs(breed) {
+    let response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random/50`)
     let data = await response.json()
     let pagination = new dogPagination(data.message);
     pagination.init();
@@ -59,10 +59,9 @@ function dogPagination(dogs) {
             dogGallery.innerHTML += `<div class='dogBlock'>
             
                 <div><img src=${dogs[i]} class='dogpic-thumb' id='${dogs[i]}'><img></div>
-                <div><img src=${dogs[i]} class='dogpic modal' id='${dogs[i]}-fullsize' ><img></div>
+                <div><img src=${dogs[i]} class='dogpic modal' id='${dogs[i]}-fullsize'><img></div>
                 </div>`}
           
-        
                 const modalOpen = document.querySelectorAll('.dogpic-thumb')
                 
                 modalOpen.forEach(trigger => {
@@ -71,11 +70,10 @@ function dogPagination(dogs) {
                     popupModal.classList.add('visible')   
                     popupModal.addEventListener('click', () => {
                     popupModal.classList.remove('visible')
-                         })})})
+                })})})
 
-                
         checkButtonOpacity();
-          selectedPage()
+        selectedPage()
       }
 
       let prevPage = function() {
@@ -115,6 +113,9 @@ function dogPagination(dogs) {
       }
    }
 
-  
-  getDogs()
+ function dogChange(breed){
+    getDogs(breed)
+};
+   
+  getDogs("chihuahua")
 

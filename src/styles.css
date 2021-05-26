@@ -97,15 +97,45 @@
     background-color: #fff;
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 50%;
     transform: translate(-50%, -50%);
     padding: 45px;
     opacity: 0;
     pointer-events: none;
     transition: all 300ms ease-in-out;
-    z-index: 1011}
+    z-index: 1011
+  }
     
     .modal.visible {
     opacity: 1;
     pointer-events: auto;
     }
+       
+    .dropdown{
+      align-items:center;
+    }
+
+    .dropdown-block {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dropdown-content {
+      background-color: royalblue;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      padding: 0.3em 1.2em;
+      margin-top: 5px;
+      border-radius:2em;
+      box-sizing: border-box;
+      font-family:'Roboto',sans-serif;
+      font-weight:300;
+      text-align:center;
+      transition: all 0.2s;
+    }
+    
+   
